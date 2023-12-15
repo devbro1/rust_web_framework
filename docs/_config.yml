@@ -6,7 +6,7 @@ repository: https://github.com/devbro1/rust_web_framework
 timezone: America/Toronto
 relative_permalinks: false
 show_downloads: true
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 markdown: kramdown
 plugins:
   - jekyll-avatar
