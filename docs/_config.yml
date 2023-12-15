@@ -7,6 +7,7 @@ timezone: America/Toronto
 relative_permalinks: false
 show_downloads: true
 theme: jekyll-theme-cayman
+
 markdown: kramdown
 plugins:
   - jekyll-avatar
