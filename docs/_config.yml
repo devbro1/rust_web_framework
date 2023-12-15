@@ -1,0 +1,6 @@
+version: 4.3.2
+name: Devbro Rust webframework
+description: test content 
+url: https://devbro.com
+repository: https://github.com/devbro1/rust_web_framework
+timezone: America/Toronto
