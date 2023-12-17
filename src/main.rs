@@ -3,6 +3,10 @@ use axum::{
     Json, Router,
 };
 
+mod routes {
+    pub mod r1;
+}
+
 #[tokio::main]
 async fn main() {
     let routes = Router::new()
