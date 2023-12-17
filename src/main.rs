@@ -1,18 +1,27 @@
 use axum::{
-    routing::{get, post},
-    Json, Router,
+    routing::{get},
+    Router,
 };
+
+use std::net::SocketAddr;
 
 #[tokio::main]
 async fn main() {
-    let routes = Router::new()
+    let routes = get_routes();
+
+    let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
+    println!("listening on {}", addr);
+    axum::Server::bind(&addr)
+        .serve(routes.into_make_service())
+        .await
+        .unwrap();
+}
+
+pub fn get_routes() -> Router {
+    let rc = Router::new()
         .route("/", get(root));
-
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
-    axum::serve(listener, routes).await.unwrap();
-
-
-    return;
+    
+    return rc;
 }
 
 async fn root() -> &'static str {
