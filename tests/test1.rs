@@ -7,6 +7,8 @@ mod tests {
         http::{self, Request, StatusCode},
     };
 
+    use web_framework::routes::get_routes;
+
     #[test]
     fn it_works() {
         let result = 2 + 2;

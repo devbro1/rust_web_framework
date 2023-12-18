@@ -5,6 +5,9 @@ use axum::{
 
 use std::net::SocketAddr;
 
+mod routes;
+use routes::get_routes;
+
 #[tokio::main]
 async fn main() {
     let routes = get_routes();
@@ -17,13 +20,5 @@ async fn main() {
         .unwrap();
 }
 
-pub fn get_routes() -> Router {
-    let rc = Router::new()
-        .route("/", get(root));
-    
-    return rc;
-}
 
-async fn root() -> &'static str {
-    "Hello, World!"
-}
+
