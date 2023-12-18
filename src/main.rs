@@ -8,6 +8,10 @@ use std::net::SocketAddr;
 mod routes;
 use routes::get_routes;
 
+mod routes {
+    pub mod api;
+}
+
 #[tokio::main]
 async fn main() {
     let routes = get_routes();
