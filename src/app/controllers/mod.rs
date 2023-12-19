@@ -1,1 +1,1 @@
-pub mod controllers;
+pub mod foo_controller;

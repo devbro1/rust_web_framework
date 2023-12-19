@@ -1,19 +1,13 @@
 use axum::{
     routing::{get},
-    Json, Router,
+    Router,
 };
-use serde_json::{Value, json};
+
+#[path="../app/mod.rs"]
+mod app;
 
 pub fn get_routes() -> Router {
     Router::new()
-        .route("/", get(root))
-        .route("/foo", get(get_foo))
-}
-
-async fn root() -> &'static str {
-    "Hello World!"
-}
-
-async fn get_foo() -> Json<Value> {
-    Json(json!({ "msg": "I am GET /foo" }))
+        .route("/", get(app::controllers::foo_controller::root))
+        .route("/foo", get(app::controllers::foo_controller::get_foo))
 }
