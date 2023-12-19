@@ -1,13 +1,8 @@
+mod routes;
 
 use lambda_http::{
     run,
     Error,
-};
-use axum::{
-    extract::Path,
-    response::Json,
-    Router,
-    routing::{get, post},
 };
 
 #[tokio::main]
@@ -15,5 +10,8 @@ async fn main() -> Result<(), Error> {
 
     let routes = routes::api::get_routes();
 
-    run(routes).await
+    //run(routes).await
+    println!("BROKEN, until lambda_http is updated to use axum:0.7.2+");
+
+    Ok(())
 }
