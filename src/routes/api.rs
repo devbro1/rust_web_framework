@@ -9,5 +9,5 @@ pub fn get_routes() -> Router {
 }
 
 async fn root() -> &'static str {
-    "hello world!"
+    "Hello World!"
 }
