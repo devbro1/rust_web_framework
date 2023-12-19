@@ -8,6 +8,7 @@ default-run = "main"
 
 [dependencies]
 axum = "0.7.2"
+axum-test = "14.0.0"
 lambda_http = "0.8.3"
 pretty_assertions = "1.4.0"
 tokio = { version = "1.35.0", features = ["full"] }
