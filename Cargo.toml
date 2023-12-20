@@ -20,12 +20,12 @@ tokio-test = "0.4.3"
 doctest = false
 
 [[bin]]
-name = "commander"
-path = "src/commander.rs"
-
-[[bin]]
 name = "main"
 path = "src/main.rs"
+
+[[bin]]
+name = "commander"
+path = "src/commander.rs"
 
 [[bin]]
 name = "aws_lambda"

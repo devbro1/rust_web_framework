@@ -1,4 +1,5 @@
 mod routes;
+mod app;
 
 use lambda_http::{
     // run,
