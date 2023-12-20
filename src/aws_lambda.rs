@@ -1,7 +1,7 @@
 mod routes;
 
 use lambda_http::{
-    run,
+    // run,
     Error,
 };
 

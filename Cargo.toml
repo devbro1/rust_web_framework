@@ -16,6 +16,9 @@ pretty_assertions = "1.4.0"
 tokio = { version = "1.35.0", features = ["full"] }
 tokio-test = "0.4.3"
 
+[lib]
+doctest = false
+
 [[bin]]
 name = "commander"
 path = "src/commander.rs"

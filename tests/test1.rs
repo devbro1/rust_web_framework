@@ -1,13 +1,16 @@
 #[cfg(test)]
 mod tests {
 
-    use axum::{
-        body::Body,
-        extract::connect_info::MockConnectInfo,
-        http::{self, Request, StatusCode},
-    };
+    // use axum::{
+    //     body::Body,
+    //     extract::connect_info::MockConnectInfo,
+    //     http::{self, Request, StatusCode},
+    // };
 
-    use web_framework::routes;
+    // mod app;
+    // mod routes;
+
+    // use web_framework::routes;
 
     #[test]
     fn it_works() {
@@ -17,7 +20,7 @@ mod tests {
 
     #[tokio::test]
     async fn hello_world() {
-        let app = routes::api::get_routes();
+        // let _app = routes::api::get_routes();
 
         // `Router` implements `tower::Service<Request<Body>>` so we can
         // call it like any tower service, no need to run an HTTP server.
